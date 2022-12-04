@@ -15,7 +15,8 @@ export function redditSearch(searchTerm) {
                 }
             }) // and then, for now, just take it and log it to the console.
         
-    console.log(output)
+    console.log(output);
+    return output;
 }
 
 // this is how the object that is returned with search goes:

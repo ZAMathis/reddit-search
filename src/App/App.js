@@ -3,17 +3,42 @@ import { redditSearch } from './RedditAPI'
 import Post from '../Components/Posts/Post';
 
 function App() {
-  const redditTest = redditSearch('yea');
+
+  
+  // const searchArray = redditSearch('yea');
+  
+  /*
+  // test array
+  const searchArray = [
+    {
+      author: 'author',
+      title: 'title'
+    },
+    {
+      author: 'author',
+      title: 'title'
+    },
+    {
+      author: 'author',
+      title: 'title'
+    }
+  ]
+  */
+
+  const postComponents = searchArray.map((item) => {
+    return <Post key={item.id} title={item.title} author={item.author}/> 
+  })
 
   return (
     <div className="App">
-      {redditTest.forEach(item => {
-         /* <Post title={index.item.title} author={index.item.author}/> */
-         console.log(item)
-      })}
       <h1>buttons here for testing</h1>
       <button>test reddit search</button>
       <Post title='test' author='yes' />
+      {postComponents.map((component) => {
+        return component
+      })}
+      {console.log('Search array: ', searchArray)}
+      {console.log('components: ', postComponents)}
     </div>
   );
 }

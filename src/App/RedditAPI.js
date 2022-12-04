@@ -9,16 +9,17 @@ export function redditSearch(searchTerm) {
                 for (let i in data.data.children) {
                     // console.log(data.data.children[i].data);
                     output.push({
+                        id: i,
                         author : data.data.children[i].data.author,
                         title : data.data.children[i].data.title
                     })
                 }
             }) // and then, for now, just take it and log it to the console.
-        
-    console.log(output);
     return output;
 }
 
+const testSearchArray = redditSearch('test');
+export default testSearchArray
 // this is how the object that is returned with search goes:
 /*
     data (display in console as an object)

@@ -8,12 +8,15 @@ export function redditSearch() {
             .then(data => {
                 console.log(data.data.children)
                 for (let i in data.data.children) {
-                    // console.log(data.data.children[i].data);
-                    output.push({
-                        key : i,
-                        author : data.data.children[i].data.author,
-                        title : data.data.children[i].data.title
-                    })
+                    // console.log(data.data.children[i].data
+                    if (data.data.children[i].data.url) {
+                        output.push({
+                            key : i,
+                            author : data.data.children[i].data.author,
+                            title : data.data.children[i].data.title,
+                            image : data.data.children[i].data.url
+                        })
+                    }
                 }
             }) // and then, for now, just take it and log it to the console.
     return output;

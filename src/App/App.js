@@ -1,7 +1,7 @@
 import './App.css';
-import { redditSearch } from './RedditAPI'
 import Post from '../Components/Posts/Post';
 import Posts from '../Components/Posts/Posts';
+import testSearchArray from './RedditAPI';
 
 function App() {
 
@@ -31,6 +31,7 @@ function App() {
       <button>test reddit search</button>
       <Post title='test' author='yes' />
       <Posts />
+      {console.log(testSearchArray)}
     </div>
   );
 }

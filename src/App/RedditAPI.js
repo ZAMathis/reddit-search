@@ -1,15 +1,16 @@
 // these functions will not be used, but I want to write them here as an example for later use
 
-export function redditSearch(searchTerm) {
-    let output = []
+export function redditSearch() {
+    const output = [];
 
-    fetch(`http://www.reddit.com/search.json?q=${searchTerm}`) // fetch the data w search term
+    fetch(`http://www.reddit.com/r/popular.json`) // fetch the data w search term
         .then(response => response.json()) // take that response and convert it to json
             .then(data => {
+                console.log(data.data.children)
                 for (let i in data.data.children) {
                     // console.log(data.data.children[i].data);
                     output.push({
-                        id: i,
+                        key : i,
                         author : data.data.children[i].data.author,
                         title : data.data.children[i].data.title
                     })
@@ -18,7 +19,7 @@ export function redditSearch(searchTerm) {
     return output;
 }
 
-const testSearchArray = redditSearch('test');
+const testSearchArray = redditSearch();
 export default testSearchArray
 // this is how the object that is returned with search goes:
 /*

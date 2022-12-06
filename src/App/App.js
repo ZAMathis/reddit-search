@@ -27,9 +27,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>buttons here for testing</h1>
-      <button>test reddit search</button>
-      <Post title='test' author='yes' />
+      <h1>WE ARE IN THE TESTING PHASE 👍</h1>
       <Posts />
       {console.log(testSearchArray)}
     </div>

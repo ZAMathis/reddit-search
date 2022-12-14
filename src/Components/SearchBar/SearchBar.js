@@ -4,9 +4,8 @@ export default function SearchBar(props) {
     const [ term, setTerm ] = useState('')
     
     const handleChange = (e) => {
-        e.preventDefault()
         setTerm(e.target.value)
-        props.setSearchTerm(`/search/?q=${e.target.value}`)
+        props.setSearchTerm(`r/all/search.json?q=${term}&restrict_sr=on&include_over_18=on&sort=relevance&t=all`)
     }
     
     return (

@@ -1,63 +1,36 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { redditSearch } from "../../App/RedditAPI";
 import Post from "./Post"
 
-export default class Posts extends React.Component {
-    constructor(props){
-        super(props)
+const Posts = (props) => {
+  const [isLoading, setIsLoading] = useState(true);
+  const [results, setResults] = useState([]);
+  const { searchTerm } = props
 
-        this.state = {
-            isLoading: true,
-            results: []
-        }
-    }
+  useEffect(() => {
+    redditSearch(searchTerm).then(result => {
+      setIsLoading(false);
+      setResults(result);
 
-    componentWillMount() {
-        redditSearch(this.props.searchTerm).then(result => {
-            this.setState({
-                isLoading: false,
-                results: result
-            })
-        })
-    }
+    });
+  }, [searchTerm]);
 
-    render() {
-
-        const { isLoading, results } = this.state;
-
-        const searchedPosts = results.map((item) => {
-            return <Post key={item.key} image={item.image} title={item.title} author={item.author}  />
-        });
-
-        if (isLoading) {
-            return <div>Loading...</div>
-        } else {
-            return (
-                <div>
-                    {searchedPosts.map((component) => {
-                        return component
-                    })}
-                </div>
-            )
-        } 
-    }
-}
-
-/**
- * import testSearchArray from "../../App/RedditAPI"
-import Post from "./Post"
-
-const searchedPosts = testSearchArray.map((item) => {
+  const searchedPosts = results.map((item) => {
     return <Post key={item.key} image={item.image} title={item.title} author={item.author}  />
-});
+  });
 
-export default function Posts() {
+  if (isLoading) {
+    return <div>Loading...</div>;
+  } else {
     return (
-       <div>
+      <div>
         {searchedPosts.map((component) => {
-            return component
+          return component;
         })}
-       </div> 
-    )
-}
- */
+        {console.log(results)}
+      </div>
+    );
+  }
+};
+
+export default Posts;

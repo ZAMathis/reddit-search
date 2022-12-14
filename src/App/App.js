@@ -4,7 +4,7 @@ import SearchBar from '../Components/SearchBar/SearchBar';
 import { useState } from 'react';
 
 export default function App() {
-  const [searchTerm, setSearchTerm] = useState('/r/popular.json')
+  const [searchTerm, setSearchTerm] = useState('r/popular.json')
 
   return (
     <div className="App">

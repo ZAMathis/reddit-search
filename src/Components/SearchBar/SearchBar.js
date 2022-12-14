@@ -1,5 +1,8 @@
 export default function SearchBar(props) {
     return (
-        <input type="text">Search</input>
+        <div>
+            <h1>test</h1>
+            <input placeholder="Search here"></input><button></button>
+        </div>
     )
 }

@@ -1,6 +1,6 @@
 import './App.css';
-import Post from '../Components/Posts/Post';
 import Posts from '../Components/Posts/Posts';
+import SearchBar from '../Components/SearchBar/SearchBar';
 import testSearchArray from './RedditAPI';
 
 function App() {
@@ -27,7 +27,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>WE ARE IN THE TESTING PHASE 👍</h1>
+      <SearchBar />
       <Posts />
       {console.log(testSearchArray)}
     </div>

@@ -1,5 +1,3 @@
-// these functions will not be used, but I want to write them here as an example for later use
-
 export async function redditSearch(searchTerm) {
     const output = []; // create an empty array to store the results
 
@@ -31,18 +29,3 @@ export async function redditSearch(searchTerm) {
 
     return output; // return the output array
 }
-
-
-
-const testSearchArray = redditSearch('/r/popular.json');
-export default testSearchArray
-// this is how the object that is returned with search goes:
-/*
-    data (display in console as an object)
-        data
-            children (these are the actual posts)
-                by default there are 24, each also and object
-                but they are also ordered by ID which makes things A LOT easier
-                    data
-                        sooo many different children from awards, to whitelist status
-*/

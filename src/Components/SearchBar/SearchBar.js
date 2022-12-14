@@ -1,4 +1,5 @@
 import { useState } from "react"
+import './SearchBar.css'
 
 export default function SearchBar(props) {
     const [ term, setTerm ] = useState('')
@@ -10,7 +11,7 @@ export default function SearchBar(props) {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        
+
         setSearchTerm(`r/all/search.json?q=${term}&restrict_sr=on&include_over_18=off&sort=relevance&t=all`)
         
         if(term === '') {
@@ -22,7 +23,9 @@ export default function SearchBar(props) {
         <div>
             <h1>test</h1>
             <form onSubmit={handleSubmit}>
-                <input value={term} type="text" placeholder="Search here" onChange={handleChange}></input><button>🔎</button>
+                <div id="searchbar-container">
+                    <input id='search-input' value={term} type="text" placeholder="Search here" onChange={handleChange}></input><button id="search-btn">🔎</button>
+                </div>
             </form>
         </div>
     )

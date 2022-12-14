@@ -1,37 +1,15 @@
 import './App.css';
 import Posts from '../Components/Posts/Posts';
 import SearchBar from '../Components/SearchBar/SearchBar';
-import testSearchArray from './RedditAPI';
+import { useState } from 'react';
 
-function App() {
-
-  
-  
-  /*
-  // test array
-  const searchArray = [
-    {
-      author: 'author',
-      title: 'title'
-    },
-    {
-      author: 'author',
-      title: 'title'
-    },
-    {
-      author: 'author',
-      title: 'title'
-    }
-  ]
-  */
+export default function App() {
+  const [searchTerm, setSearchTerm] = useState('/r/popular.json')
 
   return (
     <div className="App">
-      <SearchBar />
-      <Posts />
-      {console.log(testSearchArray)}
+      <SearchBar setSearchTerm={setSearchTerm} />
+      <Posts searchTerm={searchTerm} />
     </div>
   );
 }
-
-export default App;

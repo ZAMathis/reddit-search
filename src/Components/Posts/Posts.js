@@ -1,5 +1,4 @@
 import React from "react";
-import testSearchArray from "../../App/RedditAPI"
 import { redditSearch } from "../../App/RedditAPI";
 import Post from "./Post"
 
@@ -13,8 +12,8 @@ export default class Posts extends React.Component {
         }
     }
 
-    componentDidMount() {
-        redditSearch('/r/popular.json').then(result => {
+    componentWillMount() {
+        redditSearch(this.props.searchTerm).then(result => {
             this.setState({
                 isLoading: false,
                 results: result

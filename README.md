@@ -5,10 +5,6 @@ ReactJS
 
 React Router
 
-Redux
-
-Redux Toolkit
-
 Reddit JSON API
 
 # Features

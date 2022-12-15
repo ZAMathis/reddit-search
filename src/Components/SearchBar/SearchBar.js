@@ -17,16 +17,15 @@ export default function SearchBar(props) {
         if(term === '') {
             setSearchTerm('r/popular.json')
         }
+
+        setTerm('')
     }
     
     return (
-        <div>
-            <h1>test</h1>
-            <form onSubmit={handleSubmit}>
-                <div id="searchbar-container">
-                    <input id='search-input' value={term} type="text" placeholder="Search here" onChange={handleChange}></input><button id="search-btn">🔎</button>
-                </div>
-            </form>
-        </div>
+        <form onSubmit={handleSubmit}>
+            <div id="searchbar-container">
+                <input id='search-input' value={term} type="text" placeholder="Search here" onChange={handleChange}></input><button id="search-btn">🔎</button>
+            </div>
+        </form>
     )
 }

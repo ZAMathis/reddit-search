@@ -9,7 +9,7 @@ export default function App() {
 
   return (
     <div className="App">
-      <NavBar className='navbar' />
+      <NavBar className='navbar' setSearchTerm={setSearchTerm}/>
       <SearchBar className="searchbar" setSearchTerm={setSearchTerm} />
       <Posts className="posts" searchTerm={searchTerm} />
     </div>

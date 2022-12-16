@@ -1,6 +1,7 @@
 import './App.css';
 import Posts from '../Components/Posts/Posts';
 import SearchBar from '../Components/SearchBar/SearchBar';
+import NavBar from '../Components/NavBar/NavBar';
 import { useState } from 'react';
 
 export default function App() {
@@ -8,8 +9,9 @@ export default function App() {
 
   return (
     <div className="App">
-      <SearchBar setSearchTerm={setSearchTerm} />
-      <Posts searchTerm={searchTerm} />
+      <NavBar className='navbar' />
+      <SearchBar className="searchbar" setSearchTerm={setSearchTerm} />
+      <Posts className="posts" searchTerm={searchTerm} />
     </div>
   );
 }

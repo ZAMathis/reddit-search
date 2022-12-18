@@ -1,11 +1,15 @@
 import './Post.css';
 
 export default function Post(props) {
+    const { title, image, author, subreddit, url, selfText, upvotes, downvotes } = props;
+
     return (
         <div className="post-container">
-            <h2 className='post-header'>{props.title}</h2>
-            <img className='post-image' src={props.image} alt={props.title}/>
-            <h3 className='post-author'>{props.author}</h3>
+            <a href={url}><h2 className='post-header'>{title}</h2></a>
+            <h3>{subreddit}</h3>
+            <hr />
+            <img className='post-image' src={image} alt={title}/>
+            <h3 className='post-author'>{author}</h3>
         </div>
     )
 }

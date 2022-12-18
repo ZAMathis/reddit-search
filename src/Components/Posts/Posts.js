@@ -16,7 +16,16 @@ const Posts = (props) => {
   }, [searchTerm]);
 
   const searchedPosts = results.map((item) => {
-    return <Post key={item.key} image={item.image} title={item.title} author={item.author}  />
+    return <Post 
+    key={item.key}
+    url={item.url} 
+    image={item.image} 
+    title={item.title} 
+    author={item.author}
+    selfText={item.selfText} 
+    subreddit={item.subreddit} 
+    upvotes={item.upvotes}
+    downvotes={item.downvotes} />
   });
 
   if (isLoading) {

@@ -36,6 +36,11 @@
     text-decoration:none;
 }
 
+.post-link:hover {
+    animation: link-hover 500ms cubic-bezier( 0.55, 0.085, 0.41, 0.98 ) forwards;
+}
+
+
 .post-votes {
     font-size: 1.5rem;
 }
@@ -52,6 +57,17 @@
     border: 1;
     height: 1px;
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+
+}
+
+@keyframes link-hover {
+    0% {
+        
+    }
+
+    100% {
+        text-shadow: 0px 3px 7px rgba(41, 41, 41, 1);
+    }
 
 }
 

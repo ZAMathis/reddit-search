@@ -22,7 +22,6 @@
 }
 
 .nav-logo:hover {
-    animation: logo-hover 500ms ease-in;
     animation: logo-hover 1s cubic-bezier( 0.55, 0.085, 0.41, 0.98 ) forwards;
 }
 

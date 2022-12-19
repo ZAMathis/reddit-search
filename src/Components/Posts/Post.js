@@ -19,7 +19,7 @@ export default function Post(props) {
 
     return (
         <div className="post-container">
-            <a href={url}><h2 className='post-header'>{title}</h2></a>
+            <h2 className='post-header'>{title}</h2>
             <h4 className='post-subreddit' style={{ margin: '10px auto' }}>{subreddit}</h4>
             <hr className='post-divider' />
             {checkIfImage(image) ? <img className='post-image' src={image} alt={title}/> : selfText || <img className='post-image' src='https://play-lh.googleusercontent.com/nlptFyxNsb8J0g8ZLux6016kunduV4jCxIrOJ7EEy-IobSN1RCDXAJ6DTGP81z7rr5Zq=w600-h300-pc0xffffff-pd' alt={title}/>}

@@ -1,29 +1,24 @@
-# TO BE WRITTEN
+# Reddit Search
 
-# Technologies used:
-ReactJS
+This is a simple React app that allows you to search for posts on Reddit using the Reddit API.
 
-React Router
+## Getting Started
 
-Reddit JSON API
+1. Clone this repository to your local machine using `git clone https://github.com/ZAMathis/reddit-search`
+2. Navigate to the root directory of the project and run `npm install` to install all required dependencies
+3. Run `npm start` to start the development server and visit `http://localhost:3000` to view the app in your browser
 
-# Features
-Users can use the application on any device (desktop to mobile)
+## How to Use
 
-Users can use the application on any modern browser
+1. Enter a search query in the input field and press the search button
+2. The app will search the Reddit API for posts matching your query and display the results in a list
+3. Click on a post to view it in a new tab
 
-Users can access your application at a URL
+## Technologies Used
 
-Users see an initial view of the data when first visiting the app
+- React
+- Reddit JSON API
 
-Users can search the data using terms
+## Credits
 
-Users are shown a detailed view (modal or new page/route) when they select an item
-
-Users are delighted with a cohesive design system
-
-Users are delighted with animations and transitions
-
-Users are able to leave an error state
-
-# To be continued
+This app was built using the Reddit JSON API

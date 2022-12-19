@@ -21,7 +21,6 @@ const Posts = (props) => {
     url={item.url} 
     image={item.image} 
     title={item.title} 
-    author={item.author}
     selfText={item.selfText} 
     subreddit={item.subreddit} 
     upvotes={item.upvotes}

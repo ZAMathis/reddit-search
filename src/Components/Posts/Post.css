@@ -15,7 +15,7 @@
 }
 
 .post-header {
-    padding-bottom: 1rem;
+    padding-bottom: 10px;
     font-family: Tahoma, Geneva, sans-serif;
     font-size: 1.5rem;
     letter-spacing: 0px;
@@ -26,8 +26,31 @@
     width: 30rem;
     height: 25rem;
     object-fit: contain;
+    margin: 10px 0;
 }
 
-.post-author {
-    
+.post-link {
+    font-weight: bolder;
+    font-size: 2rem;
+    text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.93);
+    text-decoration:none;
+}
+
+.post-votes {
+    font-size: 1.5rem;
+}
+
+.upvotes-and-link {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin: 5px 0;
+}
+
+.post-divider {
+    border: 1;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+
 }

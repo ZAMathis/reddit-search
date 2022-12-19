@@ -2,6 +2,10 @@
 
 This is a simple React app that allows you to search for posts on Reddit using the Reddit API.
 
+## Live Site
+
+https://r-search.netlify.app/
+
 ## Getting Started
 
 1. Clone this repository to your local machine using `git clone https://github.com/ZAMathis/reddit-search`

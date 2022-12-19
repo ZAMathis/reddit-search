@@ -3,7 +3,7 @@ export async function redditSearch(searchTerm) {
 
     try {
         // fetch the data with the search term and convert the response to JSON
-        const response = await fetch(`http://www.reddit.com/${searchTerm}`, {
+        const response = await fetch(`https://www.reddit.com/${searchTerm}`, {
             method: 'get',
             mode: 'cors',
             headers: {

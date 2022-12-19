@@ -15,7 +15,7 @@
 }
 
 .post-header {
-    padding-bottom: 10px;
+    padding-bottom: 1rem;
     font-family: Tahoma, Geneva, sans-serif;
     font-size: 1.5rem;
     letter-spacing: 0px;
@@ -31,7 +31,7 @@
 
 .post-link {
     font-weight: bolder;
-    font-size: 2rem;
+    font-size: 2.5rem;
     text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.93);
     text-decoration:none;
 }
@@ -53,4 +53,65 @@
     height: 1px;
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
 
+}
+
+@media (max-width: 600px) {
+    .post-container {
+        width: 20rem;
+    }
+
+    .post-image {
+        width: 20rem;
+    }
+
+    .post-votes {
+        font-size: 1.25rem;
+    }
+
+    .post-link{
+        font-size: 1.75rem;;
+    }
+}
+
+@media (max-width: 400px) {
+    .post-container {
+        width: 18rem;
+    }
+
+    .post-image {
+        width: 18rem;
+    }
+
+    .post-container:first-of-type {
+        margin-top: 25vh;
+    }
+}
+
+@media (min-width: 800px) {
+    .post-container {
+        width: 40rem;
+    }
+
+    .post-image {
+        width: 40rem;
+    }
+
+    .post-header {
+        font-size: 2rem;
+    }
+
+    .post-subreddit {
+        font-size: 1.25rem;
+    }
+
+}
+
+@media (min-width: 1200px) {
+    .post-container {
+        width: 50rem;
+    }
+
+    .post-image {
+        width: 50rem;
+    }
 }

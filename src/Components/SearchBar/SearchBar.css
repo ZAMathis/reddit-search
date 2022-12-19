@@ -5,7 +5,7 @@
     position: fixed;
     left: 25vw;
     right: 25vw;
-    top: 10vh;
+    top: 11vh;
 }
 
 #search-input {
@@ -58,5 +58,25 @@
     100% {
         -webkit-transform: scale(1);
         transform: scale(1);
+    }
+}
+
+@media (max-width: 400px) {
+    #search-input {
+        width: 14rem;
+        height: 2.2rem;
+        font-size: 1.25rem;
+    }
+
+    #searchbar-container {
+        top: 15vh;
+    }
+}
+
+@media (min-width: 800px) {
+    #search-input {
+        width: 50rem;
+        height: 2.5rem;
+        font-size: 1.75rem;
     }
 }

@@ -26,7 +26,7 @@ export default function Post(props) {
             <hr className='post-divider' />
             <div className='upvotes-and-link'>
                 {upvotes > downvotes ? <p className='post-votes'>▲ {upvotes}</p> : <p className='post-votes'>▼ {downvotes}</p>}
-                <a className='post-link' href={url}>🗨</a>
+                <a className='post-link' href={url} target="_blank" >🗨</a>
             </div>
         </div>
     )

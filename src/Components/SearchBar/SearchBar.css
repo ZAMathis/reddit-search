@@ -61,7 +61,7 @@
     }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 385px) and (min-width: 375px) {
     #search-input {
         width: 14rem;
         height: 2.2rem;
@@ -70,6 +70,48 @@
 
     #searchbar-container {
         top: 15vh;
+        left: 8vw;
+        justify-content: left;
+    }
+}
+@media (max-width: 405px) and (min-width: 390px) {
+    #search-input {
+        width: 14rem;
+        height: 2.2rem;
+        font-size: 1.25rem;
+    }
+
+    #searchbar-container {
+        top: 16vh;
+        left: 11vw;
+        justify-content: left;
+    }
+}
+@media (max-width: 370px) and (min-width: 360px) {
+    #search-input {
+        width: 14rem;
+        height: 2.2rem;
+        font-size: 1.25rem;
+    }
+
+    #searchbar-container {
+        top: 15vh;
+        left: 7vw;
+        justify-content: left;
+    }
+}
+
+@media (max-width: 500px) and (min-width:410px) {
+    #search-input {
+        width: 14rem;
+        height: 2.2rem;
+        font-size: 1.25rem;
+    }
+
+    #searchbar-container {
+        top: 11vh;
+        left: 13vw;
+        justify-content: left;
     }
 }
 
